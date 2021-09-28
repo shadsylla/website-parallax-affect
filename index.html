@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title> Andrew about page<title>
+    <h1> LOve is this website </h1>
+
+    <link rel="stylesheet"  type="text/css" href="StyleAbout.css">
+
+</head>
+
+<body>
+
+    <section>
+      
+        <img src="test code/imgs/bg.jpg" id="bg" >
+        <img src="test code/imgs/moon.png" id="moon">
+        <img src="test code/imgs/mountain.png" id="mountain">
+        <img src="test code/imgs/road.png" id="road">
+
+        <h2 id="text"> Andrew Hilbert<h2>
+        </section>
+
+       <script type="text/javascript">
+       let bg = document.getElementById("bg");
+       let moon = document.getElementById("moon");
+       let mountain = document.getElementById("mountain");
+       let road = document.getElementById("road");
+       let text = document.getElementById("text");
+
+     window.addEventListener('scroll', function(){
+         var value = window.scrollY;
+
+         // when scrolling the bg or sky stays in place value *0.5 + 1 pixel
+         bg.style.top = value * 0.5 + 'px';
+         // the moon, when the event of scrolling is on,  goes from right to left. - value
+         moon.style.left = -value * 0.5 + 'px';
+         // event scroll is on goes from top to bottom
+         mountain.style.top = -value * 0.15 +  'px';
+         // road stays in place also while the event of scroll is on
+         road.style.top = value * 1 + 'px';
+         // Text goes down
+         text.style.top = value * 1 + 'px';
+
+        })
+       </script>
+
+
+        </body>
+
+</html>
